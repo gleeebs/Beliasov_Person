@@ -36,23 +36,30 @@ public:
 	\param adressBaranov Адрес создаваемого абитурента
 	\param evaluationsBeliasov Оценки создаваемого абитурента
 	*/
-	void ShowabiturentlowevaluationsBeliasov(std::string surnameBeliasov, std::string nameBeliasov, std::string  patronymicBeliasov, std::string adressBeliasov, int evaluationsBeliasov);
+	Beliasov_abiturent_class(std::string surnameBeliasov, std::string nameBeliasov, std::string  patronymicBeliasov, std::string adressBeliasov, int evaluationsBeliasov);
+	
 	/// Показывает список абитурентов имеющих неудовлетворительные оценки
 	/* Если сведений нет, то возвращает сообщение об ошибке
 	\param evaluationsBeliasov оценки абитурента
+	\param surnameBeliasov Фамилия абитурента
 	*/
-	void ShowabiturentsumevaluationsBeliasov(std::string surnameBeliasov, std::string nameBeliasov, std::string  patronymicBeliasov, std::string adressBeliasov, int evaluationsBeliasov, int currentevaluationsBeliasov);
+	void ShowabiturentlowevaluationsBeliasov(std::string surnameBeliasov, int evaluationsBeliasov);
+	
 	/// Показывает список абитурентов сумма баллов которых меньше заданной
 	/* Если сведений нет, то возвращает сообщение об ошибке
 	\param evaluationsBeliasov оценки абитурента
 	\param currentevaluationsBeliasov заданная сумма баллов
+	\param surnameBeliasov Фамилия абитурента
 	*/
-	void ShowabiturenthighsumevaluationsBeliasov(std::string surnameBeliasov, std::string nameBeliasov, std::string  patronymicBeliasov, std::string adressBeliasov, int evaluationsBeliasov, int currentabiturentBeliasov);
+	void ShowabiturentsumevaluationsBeliasov(std::string surnameBeliasov, int evaluationsBeliasov, int currentevaluationsBeliasov);
 	/// Показывает N абитуриентов, имеющих самую высокую сумму баллов, и список абитуриентов, имеющих полупроходной балл
 	/* Если сведений нет, то возвращает сообщение об ошибке
 	\param evaluationsBeliasov оценки абитурента
-	\param currenteabiturentBeliasov колличество абитурентов, которое нужно показать 
+	\param currenteabiturentBeliasov колличество абитурентов, которое нужно показать
+	\param surnameBeliasov Фамилия абитурента
 	*/
+	void ShowabiturenthighsumevaluationsBeliasov(std::string surnameBeliasov,  int evaluationsBeliasov, int currentabiturentBeliasov);
+	
 	/// Деструктор класса, освобождает ресурсы
 	~Beliasov_abiturent_class();
 };
